@@ -1,0 +1,98 @@
+### save point exit left
+POST http://192.168.1.7:3000/api/coordinates/tso3sf1m13gmtriieijium HTTP/1.1
+content-type: application/json
+
+{
+    "position": {
+        "lat": 7.130602522682437,
+        "lon": -73.12239576844732
+    },
+    "fleet":"camioneta",
+    "userid":"G2012/roman",
+    "new_property":true
+}
+
+### save point enter
+POST http://192.168.1.7:3000/api/coordinates/tso3sf1m13gmtriieijium HTTP/1.1
+content-type: application/json
+
+{
+    "position": {
+        "lat": 7.130672837363875,
+        "lon": -73.12181941803398
+    },
+    "fleet":"camioneta",
+    "userid":"G2012/roman",
+    "new_property":true
+}
+
+
+### save point exit
+POST http://192.168.1.7:3000/api/coordinates/tso3sf1m13gmtriieijium HTTP/1.1
+content-type: application/json
+
+{
+    "position": {
+        "lat": 7.130846280199933,
+        "lon": -73.12120999833519
+    },
+    "fleet":"camioneta",
+    "userid":"G2012/roman",
+    "new_property":true
+}
+
+
+### save point
+GET http://192.168.1.7:3000/api/init HTTP/1.1
+content-type: application/json
+
+
+
+### set fence
+POST http://192.168.1.7:3000/fence/set HTTP/1.1
+content-type: application/json
+
+{
+    "fenceId": "cuadraSandra",
+    "geoData": "POLYGON((-73.12189730748271 7.129235293896656,-73.1211528684322 7.129380311512506,-73.12132641864059 7.130164312204727,-73.12207085769039 7.130005699456177,-73.12189730748271 7.129235293896656))"
+}
+
+### set fence
+POST http://192.168.1.7:3000/fence/set HTTP/1.1
+content-type: application/json
+
+{
+    "points" : "13",
+    "fenceId": "cuadraArriba",
+    "geoData": "POLYGON((-73.12209049322742 7.130087413456195,-73.1213521730979 7.1302318718655755,-73.12148735847357 7.130974800110366,-73.12223954376928 7.1308234629732965,-73.12209049322742 7.130087413456195))"
+}
+
+### delete fence
+POST http://192.168.1.7:3000/fence/del HTTP/1.1
+content-type: application/json
+
+{
+    "fenceId": "check_point_10"
+}
+
+### GET fenceS
+GET http://192.168.1.7:3000/fence/hooks HTTP/1.1
+content-type: application/json
+
+
+
+
+### save point
+GET http://192.168.1.7:3000/api/savepoint HTTP/1.1
+content-type: application/json
+
+
+
+### get point
+GET http://192.168.1.7:3000/api/nearby HTTP/1.1
+content-type: application/json
+
+
+### public
+GET http://192.168.1.7:3000/public/mshtml.html HTTP/1.1
+content-type: application/json
